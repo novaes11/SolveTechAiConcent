@@ -1,4 +1,8 @@
 node_modules/
 .env
+backend/.env
 .DS_Store
 dist/
+dataBase/*.db
+dataBase/*.db-journal
+.agents/
