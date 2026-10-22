@@ -1,0 +1,41 @@
+name: 'AI Autonomous Squad'
+description: 'Esquadrão autônomo de desenvolvimento via Gemini e Notion'
+inputs:
+  github_token:
+    description: 'Token do GitHub'
+    required: true
+  gemini_api_key:
+    description: 'Chave de API do Gemini'
+    required: true
+  notion_api_key:
+    description: 'Token de Integração do Notion'
+    required: true
+  notion_task_id:
+    description: 'ID da página do Notion com a especificação da tarefa'
+    required: true
+  gemini_model:
+    description: 'Modelo do Gemini para o Esquadrão'
+    required: false
+    default: 'gemini-2.5-pro'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      shell: bash
+      run: pip install -r ${{ github.action_path }}/requirements.txt
+      
+    - name: Run Orchestrator
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        GEMINI_API_KEY: ${{ inputs.gemini_api_key }}
+        NOTION_API_KEY: ${{ inputs.notion_api_key }}
+        NOTION_TASK_ID: ${{ inputs.notion_task_id }}
+        GEMINI_MODEL: ${{ inputs.gemini_model }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+      run: python ${{ github.action_path }}/main.py

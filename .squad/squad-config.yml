@@ -1,0 +1,42 @@
+# Gerado por skills/squad-builder/scripts/squad.py. Revise antes de commitar.
+source:
+  repository: msitarzewski/agency-agents
+  commit: 4e3ac3ca6604c75113f52c695dbddcc7af928b46
+limits:
+  max_iterations_per_agent: 1
+agents:
+  - slug: project-manager-senior
+    code: "11.07"
+    division: project-management
+    file: agents/project-manager-senior.md
+    sha256: 70fb27cab174c97375293311211d5563c5ac257fba274450d1ca9c05b540ef2d
+  - slug: engineering-minimal-change-engineer
+    code: "3.35"
+    division: engineering
+    file: agents/engineering-minimal-change-engineer.md
+    sha256: 9999cc74e7b3936af892ef2c2793d105bb92f6c47789aa23db6df92bf68b45e5
+  - slug: security-appsec-engineer
+    code: "14.02"
+    division: security
+    file: agents/security-appsec-engineer.md
+    sha256: a19f0bda46f4adca5737365dbc3c7ed93e9d93b71349536d92ff055dcf4e3b83
+  - slug: testing-test-automation-engineer
+    code: "18.06"
+    division: testing
+    file: agents/testing-test-automation-engineer.md
+    sha256: 4299d038e88387546d645ccbe767b1dfdb7de10da55eba1ab103149972cd2b9b
+  - slug: specialized-codebase-archaeologist
+    code: "16.42"
+    division: specialized
+    file: agents/specialized-codebase-archaeologist.md
+    sha256: c1b2c22711cb6e74dd834f831d6a8b3f10c93cd462722073b01acae9d0a40700
+  - slug: specialized-document-generator
+    code: "16.45"
+    division: specialized
+    file: agents/specialized-document-generator.md
+    sha256: cd2ca961e0f7baa18942aaaa315e333ea4315604bbb6a182d7daa31b76dfc3a3
+  - slug: engineering-codebase-onboarding-engineer
+    code: "3.10"
+    division: engineering
+    file: agents/engineering-codebase-onboarding-engineer.md
+    sha256: 07aa548b45887c3ad768efad5fdbf6e57bea639df4f1b74c7e383142f454e2a1

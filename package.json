@@ -1,12 +1,20 @@
 {
-  "name": "js",
+  "name": "solvetechai-concent",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Plataforma de monitoramento clínico e auxílio diagnóstico especializada em doenças crônicas (Hipertensão e Diabetes)",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node tests/fix01_suite.js"
   },
-  "keywords": [],
+  "keywords": [
+    "healthcare",
+    "clinical-monitoring",
+    "hypertension",
+    "diabetes",
+    "ai-diagnostics"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
