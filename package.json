@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "node tests/fix01_suite.js"
+    "test": "node tests/fix01_suite.js && node tests/e01_t01_migration_suite.js"
   },
   "keywords": [
     "healthcare",
