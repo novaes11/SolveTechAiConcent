@@ -1,11 +1,15 @@
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const Logger = require('../core/logger');
 
 const logger = new Logger('Database');
 
 // Garante que o diretório dataBase exista antes de instanciar o arquivo SQLite
-const dbDir = path.resolve(__dirname, '../../dataBase');
+// Em ambiente Serverless (Vercel), utiliza o diretório temporário gravável (/tmp)
+const dbDir = process.env.VERCEL
+    ? path.join(os.tmpdir(), 'solvetechai-dataBase')
+    : path.resolve(__dirname, '../../dataBase');
 if (!fs.existsSync(dbDir)) {
     fs.mkdirSync(dbDir, { recursive: true });
 }

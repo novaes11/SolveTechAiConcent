@@ -10,6 +10,7 @@ const router = express.Router();
 router.get('/health', (req, res) => {
     res.status(200).json({
         status: 'ok',
+        pipeline: 'running',
         service: 'SolveTechAi Clinical API',
         timestamp: new Date().toISOString()
     });
